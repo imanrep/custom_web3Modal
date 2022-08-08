@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Header from '../comps/Header';
 
-export default function Home() {
+export default function Home({p}) {
+  const {address} = p
   return (
+  <>
+  <Header p={p}/>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -22,9 +26,9 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a onClick={() => console.log(address)} className={styles.card}>
+            <h2>GET ADDRESS &rarr;</h2>
+            <p>GET ADDRESS USING CUSTOM WEB3 MODAL</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
@@ -65,5 +69,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+  </>
   )
 }

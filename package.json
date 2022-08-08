@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@walletconnect/web3-provider": "^1.8.0",
     "next": "12.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "web3": "^1.7.5"
   },
   "devDependencies": {
     "eslint": "8.21.0",
